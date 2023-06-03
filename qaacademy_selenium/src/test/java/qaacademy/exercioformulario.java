@@ -21,7 +21,8 @@ public class exercioformulario {
             String telefone= "//*[@id='basicBootstrapForm']/div[4]/div/input";
             String homem= "//*[@id='basicBootstrapForm']/div[5]/div/label[1]";
             String  movies= "//*[@id='checkbox2']";
-            String indioma= "//*[@id='msdd']";
+            String abilidades= "//*[@id='basicBootstrapForm']/div[8]/div";
+            String apis= "//*[@id='Skills']/option[6]";
             WebDriver driver = new ChromeDriver();
              driver.get("https://demo.automationtesting.in/Register.html");
             Thread.sleep(1000);
@@ -39,8 +40,9 @@ public class exercioformulario {
             driver.findElement(By.xpath(movies)).click();
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0,400)", "");
-            driver.findElement(By.xpath(indioma)).click();
-            driver.findElement(By.xpath(indioma)).sendKeys("Portuguese");
+            driver.findElement(By.xpath(abilidades)).click();
+            driver.findElement(By.xpath(apis)).click();
+            driver.findElement(By.xpath(abilidades)).click();
 
 
 
